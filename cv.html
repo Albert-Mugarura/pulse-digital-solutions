@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Albert Mugarura - CV</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --accent: #4f46e5;
+      --accent-2: #7c3aed;
+      --dark: #111827;
+      --muted: #6b7280;
+      --light: #f5f6fb;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      font-size: 10px;
+      line-height: 1.45;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 70mm 140mm;
+    }
+
+    /* ---------- Sidebar ---------- */
+    .sidebar {
+      background: linear-gradient(180deg, #141b34 0%, #1b2a52 60%, #1f2a55 100%);
+      color: #e5e7eb;
+      padding: 13mm 9mm;
+    }
+
+    .sidebar .name {
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+      margin-bottom: 2px;
+    }
+
+    .sidebar .role {
+      font-size: 9.5px;
+      color: #a5b4fc;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 7mm;
+    }
+
+    .sidebar-section {
+      margin-bottom: 5.5mm;
+    }
+
+    .sidebar-section h2 {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #a5b4fc;
+      border-bottom: 1px solid rgba(165, 180, 252, 0.35);
+      padding-bottom: 1.5mm;
+      margin-bottom: 3mm;
+      font-weight: 700;
+    }
+
+    .contact-item {
+      margin-bottom: 2mm;
+    }
+
+    .contact-item .label {
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #94a3b8;
+    }
+
+    .contact-item .value {
+      font-size: 9px;
+      color: #e5e7eb;
+      word-break: break-all;
+    }
+
+    .skill-group {
+      margin-bottom: 2.5mm;
+    }
+
+    .skill-group .skill-cat {
+      font-size: 9px;
+      font-weight: 700;
+      color: #c7d2fe;
+    }
+
+    .skill-group .skill-items {
+      font-size: 8.8px;
+      color: #d1d5db;
+    }
+
+    .edu-item {
+      margin-bottom: 2.5mm;
+    }
+
+    .edu-item .edu-degree {
+      font-size: 9px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .edu-item .edu-school {
+      font-size: 8.8px;
+      color: #d1d5db;
+    }
+
+    .edu-item .edu-date {
+      font-size: 8.5px;
+      color: #94a3b8;
+    }
+
+    .attr-item {
+      font-size: 8.8px;
+      color: #d1d5db;
+      margin-bottom: 1.5mm;
+    }
+
+    .attr-item strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    /* ---------- Main ---------- */
+    .main {
+      padding: 11.5mm 12mm;
+    }
+
+    .main-section {
+      margin-bottom: 5mm;
+    }
+
+    .main-section h2 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--dark);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 1mm;
+      margin-bottom: 2.5mm;
+      font-weight: 700;
+    }
+
+    .profile-text {
+      font-size: 9.8px;
+      color: #374151;
+      text-align: justify;
+    }
+
+    .competencies {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5mm 4mm;
+      padding-left: 4mm;
+    }
+
+    .competencies li {
+      font-size: 9.3px;
+      color: #374151;
+      margin-bottom: 0.5mm;
+    }
+
+    .competencies li::marker {
+      color: var(--accent);
+    }
+
+    .entry {
+      margin-bottom: 3mm;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 4mm;
+    }
+
+    .entry-title {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .entry-date {
+      font-size: 9px;
+      font-weight: 600;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .entry-meta {
+      font-size: 8.8px;
+      color: var(--muted);
+      margin-bottom: 1mm;
+    }
+
+    .entry ul {
+      padding-left: 4.5mm;
+      margin-top: 0.8mm;
+    }
+
+    .entry li {
+      font-size: 9.3px;
+      color: #374151;
+      margin-bottom: 0.7mm;
+    }
+
+    .entry li::marker {
+      color: var(--accent);
+    }
+
+    .research-entry {
+      background: var(--light);
+      border-left: 3px solid var(--accent);
+      padding: 2.5mm 3.5mm;
+      margin-top: 2mm;
+    }
+
+    .research-entry .entry-title {
+      font-size: 10px;
+    }
+
+    .research-entry li {
+      font-size: 9.3px;
+      color: #374151;
+      margin-bottom: 0.7mm;
+    }
+
+    .cert-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .cert-list li {
+      font-size: 9.3px;
+      color: #374151;
+      padding-left: 4mm;
+      position: relative;
+      margin-bottom: 1.5mm;
+    }
+
+    .cert-list li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .references {
+      font-size: 9px;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 3mm;
+      border-top: 1px solid #e5e7eb;
+      padding-top: 2mm;
+    }
+
+    @media print {
+      body {
+        margin: 0;
+      }
+      .page {
+        margin: 0;
+      }
+      @page {
+        size: A4;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <div class="name">ALBERT MUGARURA</div>
+        <div class="role">Founder &amp; Software Engineer</div>
+      </div>
+
+      <div class="sidebar-section">
+        <h2>Contact</h2>
+        <div class="contact-item">
+          <div class="label">Phone</div>
+          <div class="value">+256 789 561 448<br />+256 755 364 240</div>
+        </div>
+        <div class="contact-item">
+          <div class="label">Email</div>
+          <div class="value">mugaruralbert@gmail.com</div>
+        </div>
+        <div class="contact-item">
+          <div class="label">Location</div>
+          <div class="value">Kampala, Uganda</div>
+        </div>
+        <div class="contact-item">
+          <div class="label">GitHub</div>
+          <div class="value">github.com/Albert-Mugarura</div>
+        </div>
+        <div class="contact-item">
+          <div class="label">LinkedIn</div>
+          <div class="value">linkedin.com/in/mugarura-albert-90158a340</div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h2>Technical Skills</h2>
+        <div class="skill-group">
+          <div class="skill-cat">Languages</div>
+          <div class="skill-items">PHP, Kotlin, JavaScript, Python, SQL, HTML5, CSS3</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-cat">Frameworks &amp; Libraries</div>
+          <div class="skill-items">Laravel, Firebase, Android Jetpack (MVVM), Bootstrap, Tailwind CSS</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-cat">Databases</div>
+          <div class="skill-items">MySQL, Firebase Firestore</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-cat">Tools</div>
+          <div class="skill-items">Git, GitHub, VS Code, Android Studio, XAMPP, Composer</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-cat">Other</div>
+          <div class="skill-items">REST APIs, Database Design, Authentication, UI/UX, Agile Team Development, AI &amp; Machine Learning</div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h2>Education</h2>
+        <div class="edu-item">
+          <div class="edu-degree">BSc Software Engineering</div>
+          <div class="edu-school">Makerere University, Kampala</div>
+          <div class="edu-date">2024 &ndash; Present</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">Diploma in Fundamentals of Artificial Intelligence</div>
+          <div class="edu-school">Alison Online Programs</div>
+          <div class="edu-date">2025</div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h2>Professional Attributes</h2>
+        <div class="attr-item"><strong>Communication:</strong> clear technical writing &amp; presentation</div>
+        <div class="attr-item"><strong>Teamwork:</strong> experienced in agile team projects</div>
+        <div class="attr-item"><strong>Reliability:</strong> deadline-driven, detail-oriented</div>
+        <div class="attr-item"><strong>Adaptability:</strong> quick learner across stacks</div>
+      </div>
+
+      <div class="sidebar-section">
+        <h2>Languages</h2>
+        <div class="skill-items">English (Fluent)</div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <div class="main-section">
+        <h2>Professional Summary</h2>
+        <p class="profile-text">
+          Founder of Pulse Digital Solutions UG and Software Engineering student at Makerere University with hands-on
+          experience in web and mobile development, artificial intelligence, and enterprise IT systems. Former IT Intern
+          at Equity Bank Uganda, where I supported digital banking infrastructure &mdash; giving me direct exposure to
+          Uganda's financial sector. Focused on building secure, scalable, user-centred solutions with a results-driven,
+          agile mindset.
+        </p>
+      </div>
+
+      <div class="main-section">
+        <h2>Core Competencies</h2>
+        <ul class="competencies">
+          <li>Web Development (Laravel, PHP, MySQL)</li>
+          <li>Mobile Development (Android, Kotlin, Firebase)</li>
+          <li>Artificial Intelligence &amp; Machine Learning</li>
+          <li>Database Design &amp; REST APIs</li>
+          <li>UI/UX &amp; Responsive Design</li>
+          <li>Agile Team Development &amp; Communication</li>
+        </ul>
+      </div>
+
+      <div class="main-section">
+        <h2>Project Experience</h2>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">CampusNest &ndash; Online Hostel Allocation System</span>
+            <span class="entry-date">2026</span>
+          </div>
+          <div class="entry-meta">Mobile App &bull; Team Project &bull; Android Studio, Firebase, Kotlin</div>
+          <ul>
+            <li>Built login, authentication, and onboarding flows for student users.</li>
+            <li>Implemented search and filtering by location, price, and room type.</li>
+            <li>Integrated Firebase database and UI development following MVVM architecture.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Vehicle Hire Management System</span>
+            <span class="entry-date">2026</span>
+          </div>
+          <div class="entry-meta">Web App &bull; Team Project &bull; PHP, Laravel, MySQL, XAMPP</div>
+          <ul>
+            <li>Developed customer booking logic with validation to prevent double bookings.</li>
+            <li>Implemented booking models and database migrations in Laravel.</li>
+            <li>Managed booking workflows (pending &rarr; confirmed &rarr; completed).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="main-section">
+        <h2>Work Experience</h2>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Founder &amp; Lead Developer &ndash; Pulse Digital Solutions UG</span>
+            <span class="entry-date">2026</span>
+          </div>
+          <div class="entry-meta">Kampala, Uganda</div>
+          <ul>
+            <li>Lead a digital solutions company delivering web, mobile, and AI-driven products for businesses and individuals.</li>
+            <li>Manage projects end-to-end &mdash; requirements, build, and deployment &mdash; using Laravel, Android, and Python.</li>
+            <li>Provide AI integration, website management, UI/UX, and IT support for corporate and SME clients.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">IT Intern &ndash; Equity Bank Uganda (IT Department)</span>
+            <span class="entry-date">2025</span>
+          </div>
+          <div class="entry-meta">Kampala, Uganda</div>
+          <ul>
+            <li>Supported digital banking systems, hardware, and system maintenance.</li>
+            <li>Assisted with software troubleshooting and IT documentation.</li>
+            <li>Gained hands-on exposure to enterprise financial technology environments.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Customer Service Assistant &ndash; Equity Bank Uganda</span>
+            <span class="entry-date">2024</span>
+          </div>
+          <div class="entry-meta">Kampala, Uganda</div>
+          <ul>
+            <li>Assisted clients with digital banking platforms, account verification, and inquiries.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Web Administrator &ndash; Kwiki Education Services</span>
+            <span class="entry-date">2026</span>
+          </div>
+          <div class="entry-meta">kwiki-services.org &bull; Kampala, Uganda</div>
+          <ul>
+            <li>Administered the organisation's WordPress website &mdash; content, structure, and media.</li>
+            <li>Integrated an AI-powered assistant (Claude via MCP) for automated content management.</li>
+            <li>Implemented custom CSS, JavaScript enhancements, and UI improvements.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="main-section">
+        <h2>Certifications &amp; Research</h2>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Certificate of Competency &amp; Research Contribution &ndash; Applied AI</span>
+            <span class="entry-date">2025</span>
+          </div>
+          <div class="entry-meta">AI Software &amp; Intelligent Systems Innovation Exhibition &amp; Pitch Day</div>
+        </div>
+        <div class="research-entry">
+          <div class="entry-title">Applied AI Research</div>
+          <ul>
+            <li>Researched graph-based reasoning large vision models for Ugandan Sign Language translation in infectious disease screening.</li>
+            <li>Presented findings to a panel of evaluators at the AI Innovation Exhibition &amp; Pitch Day.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="references">References available upon request</div>
+    </main>
+  </div>
+</body>
+</html>
