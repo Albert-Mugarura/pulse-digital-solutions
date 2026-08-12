@@ -538,9 +538,21 @@ body {
 }
 
 .highlight-icon {
-  font-size: 1.6rem;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(99, 102, 241, 0.12);
+  border-radius: 12px;
   margin-bottom: 8px;
+}
+
+.highlight-icon i,
+.highlight-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--accent);
 }
 
 .highlight-card h3 {
@@ -689,7 +701,20 @@ body {
 }
 
 .project-icon {
-  font-size: 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(99, 102, 241, 0.12);
+  border-radius: 10px;
+}
+
+.project-icon i,
+.project-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--accent);
 }
 
 .project-links {
@@ -809,8 +834,21 @@ body {
 }
 
 .research-icon {
-  font-size: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: rgba(99, 102, 241, 0.12);
+  border-radius: 12px;
   flex-shrink: 0;
+}
+
+.research-icon i,
+.research-icon svg {
+  width: 26px;
+  height: 26px;
+  stroke: var(--accent);
 }
 
 .research-card h4 {
@@ -965,7 +1003,21 @@ body {
 }
 
 .cert-badge {
-  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(99, 102, 241, 0.12);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.cert-badge i,
+.cert-badge svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--accent-2);
 }
 
 .cert-name {
@@ -1016,8 +1068,21 @@ body {
 }
 
 .contact-icon {
-  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(99, 102, 241, 0.12);
+  border-radius: 8px;
   flex-shrink: 0;
+}
+
+.contact-icon i,
+.contact-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--accent);
 }
 
 /* ---------- Business card ---------- */
