@@ -1,6 +1,11 @@
 ﻿(function () {
   'use strict';
 
+  /* ---------- Feather Icons ---------- */
+  if (typeof feather !== 'undefined') {
+    feather.replace();
+  }
+
   var TITLES = [
     'Web Development',
     'Mobile App Development',
