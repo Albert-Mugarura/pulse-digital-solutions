@@ -278,27 +278,7 @@ body {
   padding: 5px;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   box-shadow: 0 20px 50px var(--accent-glow);
-  animation: flyIn 1.2s ease-out forwards;
-}
-
-@keyframes flyIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-150vw) scale(0.5);
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    transform: translateX(15px) scale(1.05);
-  }
-  90% {
-    transform: translateX(-8px) scale(0.98);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-  }
+  transform: rotate(-3deg);
 }
 
 .hero-avatar img {
