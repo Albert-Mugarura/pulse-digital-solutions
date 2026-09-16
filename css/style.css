@@ -300,14 +300,6 @@ body {
     transform: translateX(0) scale(1);
   }
 }
-  90% {
-    transform: translateX(-8px) scale(0.98);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-  }
-}
 
 .hero-avatar img {
   width: 100%;
